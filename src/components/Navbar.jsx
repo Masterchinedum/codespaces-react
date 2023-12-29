@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className='navCont'>
             <div className='logoCont'>
-                <img src="../../public/(Troll Face).png" className= "logo" alt="logo" />
+                <img src="/TrollFace.png" className= "logo" alt="logo" />
                 <h3 className='logo-text'>Meme Generator</h3>
             </div>
             <div className='menuIt'>
