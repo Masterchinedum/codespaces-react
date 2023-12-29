@@ -8,7 +8,7 @@
   width: 550px;
   height: 65px;
   flex-shrink: 0;
-  background-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   display: flex;
 }
 
