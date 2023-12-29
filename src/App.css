@@ -56,19 +56,18 @@
   }
   .text-field {
     display: flex;
-    
+    padding: 28px 37px 0px;
+    justify-content: space-between;
   }
 
   .top-textcont {
     display: flex;
     flex-direction: column;
-    padding-right: 33px;
   }
 
   .bottom-textcont {
     display: flex;
     flex-direction: column;
-    padding-left: 33px;
   }
 
   .top-text-lab{
