@@ -1,10 +1,12 @@
+import React from 'react';
 
 const Body = () => {
+
     return (
         <div className="text-field-cont">
             <form className="text-field">
                 <div className="top-textcont">
-                    <label className="top-text-lab">Top Text</label>
+                    <label className="top-text-lab">Top text</label>
                     <input type="text" className="top-text" placeholder="Shut up" />
                 </div>
                 <div className="bottom-textcont">
