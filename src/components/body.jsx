@@ -3,7 +3,12 @@ import memesgenerator from '../../memesgenerator';
 
 const Body = () => {
 
-    
+    const printRandomMemeUrl = () => {
+        const memesArray = memesgenerator.data.memes;
+        const randomIndex = Math.floor(Math.random() * memesArray.length);
+        const randomMemeUrl = memesArray[randomIndex].url;
+        console.log(randomMemeUrl);
+    };
 
     return (
         <div className="text-field-cont">
@@ -17,14 +22,10 @@ const Body = () => {
                     <input type="text" className="bottom-text" placeholder="And take my money" />
                 </div>
             </form>
-            <div className= 'btncont'> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
+            <div className= 'btncont' onClick={printRandomMemeUrl}> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
         </div>
     );
 };
-const printRandomMemeUrl = () => {
-    const randomIndex = Math.floor(Math.random() * memesgenerator.length);
-    const randomMemeUrl = memesgenerator[randomIndex];
-    console.log(randomMemeUrl);
-};
+
 
 export default Body;
