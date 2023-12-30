@@ -51,8 +51,7 @@
     align-items: center;
   }
   .text-field-cont{
-    padding: 28px 37px;
-    width: 513px;
+    width: 550px;
   }
   .text-field {
     display: flex;
@@ -108,6 +107,10 @@
     gap: 7px;
   }
 
+  .btncont {
+    padding: 15px 37px;
+  }
+
   button.form-buttom {
     background:  linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
     border-radius: 5px;
@@ -120,5 +123,4 @@
     line-height: 15px;
     padding: 11px 11px;
     width: 100%;
-    margin-top: 15px;
   }

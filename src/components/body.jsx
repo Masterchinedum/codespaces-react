@@ -14,7 +14,7 @@ const Body = () => {
                     <input type="text" className="bottom-text" placeholder="And take my money" />
                 </div>
             </form>
-            <div> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
+            <div className= 'btncont'> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
         </div>
     );
 };
