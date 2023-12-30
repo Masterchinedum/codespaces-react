@@ -1,6 +1,9 @@
 import React from 'react';
+import memesgenerator from '../../memesgenerator';
 
 const Body = () => {
+
+    
 
     return (
         <div className="text-field-cont">
@@ -17,6 +20,11 @@ const Body = () => {
             <div className= 'btncont'> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
         </div>
     );
+};
+const printRandomMemeUrl = () => {
+    const randomIndex = Math.floor(Math.random() * memesgenerator.length);
+    const randomMemeUrl = memesgenerator[randomIndex];
+    console.log(randomMemeUrl);
 };
 
 export default Body;
