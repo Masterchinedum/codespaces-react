@@ -125,3 +125,21 @@
     width: 100%;
     cursor: pointer;
   }
+
+  .meme-image-cont {
+    width: 550px;
+    background: var(--gray-100, #F9FAFB);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .meme-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 15px 37px;
+  }
