@@ -1,12 +1,14 @@
-import React from 'react';
+import {React, useState} from 'react';
 import memesgenerator from '../../memesgenerator';
 
 const Body = () => {
 
+    const [image, setImage] = useState('');
     const printRandomMemeUrl = () => {
         const memesArray = memesgenerator.data.memes;
         const randomIndex = Math.floor(Math.random() * memesArray.length);
         const randomMemeUrl = memesArray[randomIndex].url;
+        setImage(randomMemeUrl);
         console.log(randomMemeUrl);
     };
 
@@ -22,7 +24,10 @@ const Body = () => {
                     <input type="text" className="bottom-text" placeholder="And take my money" />
                 </div>
             </form>
-            <div className= 'btncont' onClick={printRandomMemeUrl}> <button className="form-buttom" type="submit">Get a new meme image</button> </div> 
+            <div className= 'btncont' > <button className="form-buttom" onClick={printRandomMemeUrl}>Get a new meme image</button> </div>
+            <div className="meme-image-cont"> 
+                <img className="meme-image" src={image} alt="" />
+            </div>
         </div>
     );
 };
