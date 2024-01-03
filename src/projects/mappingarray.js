@@ -15,7 +15,7 @@ function App() {
     return (
         <div>
             <button>Add Item</button>
-            {{display}}
+            {display}
         </div>
     )
 }
