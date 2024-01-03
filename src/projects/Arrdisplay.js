@@ -13,25 +13,26 @@ import './Arrdisplay.css';
  * Spoiler: the page won't update when new things get added
  * to the array!
  */
-
 function Arrdisplay() {
-    const [thingsArray, setThingsArray] = useState(["Thing 1", "Thing 2"]);
+  const [thingsArray, setThingsArray] = useState(["Thing 1", "Thing 2"]);
 
-    const addNewItem = () => {
-      const newItem = `Thing ${thingsArray.length + 1}`;
-      setThingsArray([...thingsArray, newItem]);
-    };
-  
-    const thingsElements = thingsArray.map((thing, index) => (
-      <p key={index}>{thing}</p>
-    ));
-  
-    return (
-      <div>
-        <button onClick={addNewItem}>Add Item</button>
-        {thingsElements}
-      </div>
-    );
+  const addNewItem = () => {
+    setThingsArray(prevThingsArray => {
+      const newItem = `Thing ${prevThingsArray.length + 1}`;
+      return [...prevThingsArray, newItem];
+    });
+  };
+
+  const thingsElements = thingsArray.map((thing, index) => (
+    <p key={index}>{thing}</p>
+  ));
+
+  return (
+    <div>
+      <button onClick={addNewItem}>Add Item</button>
+      {thingsElements}
+    </div>
+  );
 }
 
 export default Arrdisplay;
