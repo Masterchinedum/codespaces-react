@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Arrdisplay.css';
 
 /**
@@ -15,19 +15,23 @@ import './Arrdisplay.css';
  */
 
 function Arrdisplay() {
-    const thingsArray = ["Thing 1", "Thing 2"]
-    const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
-    let clickEvent = () => {
-            newthing = `Thing ${thingsArray.length + 1}`;
-            thingsArray.push(newthing);
-            console.log(thingsArray);
+    const [thingsArray, setThingsArray] = useState(["Thing 1", "Thing 2"]);
+
+    const addNewItem = () => {
+      const newItem = `Thing ${thingsArray.length + 1}`;
+      setThingsArray([...thingsArray, newItem]);
     };
+  
+    const thingsElements = thingsArray.map((thing, index) => (
+      <p key={index}>{thing}</p>
+    ));
+  
     return (
-        <div>
-            <button onClick={clickEvent}>Add Item</button>
-            {thingsElements}
-        </div>
-    )
+      <div>
+        <button onClick={addNewItem}>Add Item</button>
+        {thingsElements}
+      </div>
+    );
 }
 
 export default Arrdisplay;
