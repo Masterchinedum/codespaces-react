@@ -23,8 +23,8 @@ function Arrdisplay() {
     });
   };
 
-  const thingsElements = thingsArray.map((thing, index) => (
-    <p key={index}>{thing}</p>
+  const thingsElements = thingsArray.map(thing => (
+    <p>{thing}</p>
   ));
 
   return (
