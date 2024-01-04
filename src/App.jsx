@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Body from './components/body';
-import Arrdisplay from './projects/Arrdisplay';
 import './App.css';
 
 const App = () => {
@@ -14,7 +13,6 @@ const App = () => {
     <div className='App'>
       <Navbar />
       <Body />
-      <Arrdisplay />
     </div>
   )
   }
