@@ -11,7 +11,9 @@ export default function App() {
     function add() {
         setCount(prevCount => prevCount + 1);
     }
-
+        function remove() {
+        setCount(prevCount => prevCount - 1);
+    }
     
     return (
         <div className="counter">
