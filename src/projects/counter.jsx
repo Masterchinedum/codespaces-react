@@ -2,16 +2,22 @@ import React from "react"
 
 export default function App() {
     /**
-     * Challenge: Set up state to track our count (initial value is 0)
+     * Challenge: Create a function called `add` that runs
+     * when the + button is clicked. (Can just console.log("add") for now)
      */
-    let [count, setCount] = React.useState(0);
+    const [count, setCount] = React.useState(0)
+    
+    const add = () => { 
+        console.log (`${count + 1}`); 
+        };
+    
     return (
         <div className="counter">
             <button className="counter--minus">–</button>
             <div className="counter--count">
                 <h1>{count}</h1>
             </div>
-            <button className="counter--plus">+</button>
+            <button className="counter--plus" onClick= {add}>+</button>
         </div>
     )
 }
