@@ -9,10 +9,10 @@ const Body = () => {
         randomImage: "http://i.imgflip.com/1bij.jpg",
       });
 
-      const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+      const [allMemeImages, setAllMemeImages] = React.useState(memesgenerator);
 
     const printRandomMemeUrl = () => {
-        const memesArray = memesgenerator.data.memes;
+        const memesArray = allMemeImages.data.memes;
         const randomIndex = Math.floor(Math.random() * memesArray.length);
         const randomMemeUrl = memesArray[randomIndex].url;
         setImage((prevMeme) => ({
@@ -56,7 +56,7 @@ const Body = () => {
       <div className="meme">
         <img src={image.randomImage} className="meme--image" />
         <h2 className="meme--text top">{image.topText}</h2>
-        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+        <h2 className="meme--text bottom">{image.bottomText}</h2>
       </div>
     </main>
     );
