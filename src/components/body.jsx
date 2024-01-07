@@ -22,23 +22,43 @@ const Body = () => {
         console.log(randomMemeUrl);
     };
 
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setMeme((prevMeme) => ({
+          ...prevMeme,
+          [name]: value,
+        }));
+      };
+
     return (
-        <div className="text-field-cont">
-            <form className="text-field">
-                <div className="top-textcont">
-                    <label className="top-text-lab">Top text</label>
-                    <input type="text" className="top-text" placeholder="Shut up" />
-                </div>
-                <div className="bottom-textcont">
-                    <label className="bottom-text-lab">Bottom text</label>
-                    <input type="text" className="bottom-text" placeholder="And take my money" />
-                </div>
-            </form>
-            <div className= 'btncont' > <button className="form-buttom" onClick={printRandomMemeUrl}>Get a new meme image</button> </div>
-            <div className="meme-image-cont"> 
-                <img className="meme-image" src={image} alt="" />
-            </div>
-        </div>
+            <main>
+      <div className="form">
+        <input
+          type="text"
+          name="topText"
+          value={meme.topText}
+          placeholder="Top text"
+          className="form--input"
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="bottomText"
+          value={image.bottomText}
+          placeholder="Bottom text"
+          className="form--input"
+          onChange={handleInputChange}
+        />
+        <button className="form--button" onClick={printRandomMemeUrl}>
+          Get a new meme image 🖼
+        </button>
+      </div>
+      <div className="meme">
+        <img src={image.randomImage} className="meme--image" />
+        <h2 className="meme--text top">{image.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+      </div>
+    </main>
     );
 };
 
