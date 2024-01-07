@@ -3,7 +3,13 @@ import memesgenerator from '../../memesgenerator';
 
 const Body = () => {
 
-    const [image, setImage] = useState('');
+    const [image, setImage] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "http://i.imgflip.com/1bij.jpg",
+      });
+
+
     const printRandomMemeUrl = () => {
         const memesArray = memesgenerator.data.memes;
         const randomIndex = Math.floor(Math.random() * memesArray.length);
