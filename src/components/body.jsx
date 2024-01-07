@@ -9,12 +9,16 @@ const Body = () => {
         randomImage: "http://i.imgflip.com/1bij.jpg",
       });
 
+      const [allMemeImages, setAllMemeImages] = React.useState(memesData);
 
     const printRandomMemeUrl = () => {
         const memesArray = memesgenerator.data.memes;
         const randomIndex = Math.floor(Math.random() * memesArray.length);
         const randomMemeUrl = memesArray[randomIndex].url;
-        setImage(randomMemeUrl);
+        setImage((prevMeme) => ({
+            ...prevMeme,
+            randomImage: randomMemeUrl,
+          }));
         console.log(randomMemeUrl);
     };
 
